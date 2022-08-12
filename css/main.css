@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+ul {
+    list-style: none;
+    transition: 2s;
+}
+
+a {
+    text-decoration: none;
+    color: #3c3b37c0;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+
+
+/* header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,#2a2d2b56,#2e540228), url("../images/header.webp");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header nav .menu {
+    display: none;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+
+}
+
+header nav .logo {
+    color: #3bda72;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 15px 15px 0;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+    cursor: default;
+}
+
+header nav .logo::selection,header nav .logo span::selection {
+    list-style: none;
+    
+}
+
+header nav .logo span {
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+    color: rgb(254, 186, 58);
+}
+
+header nav .logo span:first-of-type {
+    background-color: #3bda72;
+    border-radius: 20px 0 20px 0;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-weight: 800;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px 15px 0;
+}
+
+
+
+header nav ul li a:hover {
+    color: #00ff59e8;
+}
+
+header nav ul li:first-of-type a {
+    color: #00ff59e8;
+    
+}
+
+header .content-header {
+    width: 35%;
+    text-transform: capitalize;
+    position: relative;
+    top: 40%;
+    left: 20%;
+    transform: translate(-20%,-50%);
+    text-align: center;
+}
+
+header .content-header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    color: #00ff59e8;
+}
+
+header .content-header .icon {
+    height: 100px;
+    animation-name: down-now;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    
+    transition: all 2s ease-in-out ;
+    position: relative;
+    
+}
+
+header .content-header .icon i {
+    font-size: 50px;
+    
+
+}
+
+@keyframes down-now {
+    0% {
+        transform: translate(0,0%);
+        
+    }
+    50% {
+        transform: translate(0,50%);
+    }
+    100% {
+        transform: translate(0,0%);
+    }
+    
+}
+
+
+/* header */
+
+
+/* preloader */
+
+.preloader {
+    width: 100%;
+    height: 100vh;
+    background: #fff url("../images/loader.gif");
+    position: fixed;
+    z-index: 100;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+/* preloader */
+
+
+/* sections */
+
+section {
+    text-align: center;
+    background-color: #d79024;
+}
+section iframe {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin: 100px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px black;
+}
+
+section:nth-of-type(2) {
+    background-color: #3fd724;
+}
+
+section:nth-of-type(3) {
+    background-color: #2483d7;
+}
+
+section:last-child {
+    background-color: #d79024;
+}
+/* sections */
+
+/* footer */
+footer {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #d79024;
+    box-shadow: -3px 0 10px black;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+footer span {
+    color: blueviolet;
+    font-weight: 700;
+}
+/* footer */
+
+@media (max-width: 944px) {
+    header {
+        background-position-x: right ;
+        
+    }
+    header nav {
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    header nav .menu {
+        display: block;
+        padding: 15px 20px 0;
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+        right: 32px;
+    }
+    header nav ul {
+        
+        opacity: 0;
+        height: 0;
+        background-color: #37383755;
+    }
+    .showMenu {
+        opacity: 1;
+        height: 50vh;
+        
+    }
+    .hideContent{
+        opacity: 0;
+    }
+    header nav ul li {
+        display: block;
+        padding: 15px 0;
+    }
+    header .content-header{
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    header .content-header h1 {
+        font-size: 50px;
+        color: #00ff59e8;
+    }
+    .preloader {
+        background-size: 80%;
+    }
+    section iframe {
+        height: 50vh;
+    }
+}
